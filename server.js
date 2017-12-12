@@ -51,35 +51,37 @@ function getPageAsync(url){
             }
             if(sres.text){
                 const $ = cheerio.load(sres.text);
+                const tagArr = [];
+                const typeArr = [];
                 const items = [];
                 $('.house-lst .pic-panel img').each(function (index, element) {
-                    console.log(index);
-                    const tagsArr = [];
-                    const typesArr = [];
                     const $element = $(element);
                     const $info_1 = $($('.house-lst .info-panel .col-1')[index]);
                     const $info_2 = $($('.house-lst .info-panel .col-2')[index]);
+
+                    $info_1.find('.other span').each(function (i, item) {
+                        tagArr[i] = $(item).text().replace(/(\t)|(\n)|(\s+)/g,'');
+                    });
+
+                    $info_1.find('.type span').each(function (i, item) {
+                        typeArr[i] = $(item).text().replace(/(\t)|(\n)|(\s+)/g,'');
+                    });
+
                     const $eleInfo = {
                         src: $element.attr('data-original'),
                         alt: $element.attr('alt'),
                         name: $info_1.find('h2 a').text(),
                         where: $info_1.find('.where .region').text(),
-                        area: $info_1.find('.area').text() + $info_1.find('.area span').text(),
-                        tags: $info_1.find('.other span').map(function (ele) {
-                            tagsArr.push($(ele).text());
-                        },function () {
-                            return tagsArr;
-                        }),
-                        types: $info_1.find('.type span').map(function (ele) {
-                            typesArr.push($(ele).text());
-                        },function () {
-                            return typesArr;
-                        }),
-                        price: $info_2.find('.price .num').text()
+                        area: $info_1.find('.area').text().replace(/(\t)|(\n)|(\s+)/g,''),
+                        tags: tagArr,
+                        types: typeArr,
+                        price: $info_2.find('.price .average').text().replace(/(\t)|(\n)|(\s+)/g,'')
                     };
+
                     loupan.create($eleInfo, function (err) {
                         if(err) console.log(err);
                     });
+
                     items.push($eleInfo);
                 });
                 console.log(items);
