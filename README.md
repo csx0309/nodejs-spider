@@ -35,3 +35,7 @@ socket.io
 > npm run server
 
 > npm start
+
+## 过程
+
+[简书](http://www.jianshu.com/p/86551d5a5a28)
