@@ -2,23 +2,19 @@
 
 ## 技术栈
 
-Nodejs
+Nodejs express mongodb superagent cherrio
 
-express
+React React-Router(v4) Ant-design socket.io
 
-mongodb(mongoose)
+## 截图
 
-superagent
+![](http://upload-images.jianshu.io/upload_images/7429221-50bf4d57a58623d6.gif?imageMogr2/auto-orient/)
 
-cherrio
+![](http://upload-images.jianshu.io/upload_images/7429221-e2432db6a7e91884.gif?imageMogr2/auto-orient/)
 
-React
+![](http://upload-images.jianshu.io/upload_images/7429221-a45d55c9764838a1.gif?imageMogr2/auto-orient/)
 
-React-Router(v4)
-
-Ant-design
-
-socket.io
+![](http://upload-images.jianshu.io/upload_images/7429221-d5088ebd615dd8de.gif?imageMogr2/auto-orient/)
 
 ## 快速开始
 
