@@ -1,4 +1,4 @@
-# Nodejs爬虫实战项目之链家
+# Nodejs-spider
 
 ## 技术栈
 
@@ -31,7 +31,3 @@ React React-Router(v4) Ant-design socket.io
 > npm run server
 
 > npm start
-
-## 过程
-
-[简书](http://www.jianshu.com/p/86551d5a5a28)
