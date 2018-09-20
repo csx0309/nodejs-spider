@@ -22,11 +22,7 @@ React React-Router(v4) Ant-design socket.io
 
 > npm install
 
-> 开启mongodb服务
-
-[mongodb的安装与配置](https://jingyan.baidu.com/article/d5c4b52bef7268da560dc5f8.html)
-
-关键：D:/mongodb/bin>mongod --dbpath D:\mongodb\data\db
+> [开启mongodb服务](https://jingyan.baidu.com/article/d5c4b52bef7268da560dc5f8.html)
 
 > npm run server
 
